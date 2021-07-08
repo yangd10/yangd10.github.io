@@ -1,0 +1,142 @@
+
+body {
+    background-color: #D5DBDB;
+    color: #212529;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
+}
+
+.container {
+    margin-left: 250px;
+    margin-right: -50px;
+    width: 80%;
+}
+
+.fixed-header {
+    background-color: #A9CCE3;
+    color: #fff;
+    position: fixed;
+    padding: 25px 0;
+    top: 0;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    z-index: 10;
+}
+
+.sideNav {
+   height: 350px;
+   width: 0;
+   position: fixed;
+   z-index: 1;
+   top: 0;
+   left: 0;
+   background-color: #D4E6F1;
+   opacity: 0.7;
+   overflow-x: hidden;
+   margin-top: 120px;
+   margin-left: 0;
+   padding-top: 60px;
+   transition: 0.2s;
+}
+
+.sideNav a {
+   padding: none;
+   text-decoration: none;
+   font-size: 25px;
+   color: #000000;
+   line-height: 50px;
+   display: block;
+   transition: 0.2s;
+}
+
+.button {
+    color: black;
+    text-decoration: none;
+}
+
+
+.button:hover {
+    text-decoration: none;
+    color: white;
+}
+
+input[type="button"]
+{
+    border: none;
+    outline: none;padding: none;
+   background: none;
+   color: #fff;
+   font-size: 30px;
+   border: none;
+   border-radius: 2%;
+   float: left;
+   margin-top: -50px;
+   margin-left: 50px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sideNav {padding-top: 15px;}
+  .sideNav a {font-size: 18px;}
+}
+
+.about, .education, .experience, .projects {
+    padding: 9rem 2rem 4rem 2rem;
+}
+
+.profile {
+    float: right;
+    margin-top: -50px;
+    margin-left: -50px;
+    border-radius: 15px;
+    width: 160px;
+    height: 200px;
+}
+
+.seal {
+    float: left;
+    margin-left: -100px;
+    width: 65px;
+    height: 65px;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+}
+
+.bio {
+    width: 65%;
+}
+
+.time, .location {
+    float: right;
+}
+
+footer {
+    background-color: #A9CCE3;
+    height: 120px;
+    bottom: 0;
+    width: 100%;  
+}
+
+.contact {
+    float: left;
+    line-height: 6px;
+    width: 70%;
+    margin: 25px;
+    font-size: 16px;
+}
+
+.links {
+    float: right;
+    margin: 25px;
+    font-size: 16px;
+    padding: 0px 10px;
+    word-wrap: normal;
+    display: inline-block;
+}
