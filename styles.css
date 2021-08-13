@@ -1,82 +1,72 @@
-
 body {
-    background-color: #D5DBDB;
-    color: #212529;
+    background-color: #383838;
+    color: #ffffff;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     margin: 0;
     text-align: left;
-}
-
-.container {
-    margin-left: 250px;
-    margin-right: -50px;
-    width: 80%;
+    scroll-behavior: smooth;
 }
 
 .fixed-header {
-    background-color: #A9CCE3;
-    color: #fff;
-    position: fixed;
-    padding: 25px 0;
-    top: 0;
-    text-align: center;
+    background-color: rgb(27, 26, 26);
+    color: #ffffff;
+    position: sticky;
+    padding: 25px;
+    text-align: right;
     text-decoration: none;
     width: 100%;
-    z-index: 10;
+    top: 0;
+left: 0;
+right: 0;
+z-index: 10;
 }
 
-.sideNav {
-   height: 350px;
-   width: 0;
-   position: fixed;
-   z-index: 1;
-   top: 0;
-   left: 0;
-   background-color: #D4E6F1;
-   opacity: 0.7;
-   overflow-x: hidden;
-   margin-top: 120px;
-   margin-left: 0;
-   padding-top: 60px;
-   transition: 0.2s;
+.purple {
+    color:#AA00FF
 }
 
-.sideNav a {
-   padding: none;
-   text-decoration: none;
-   font-size: 25px;
-   color: #000000;
-   line-height: 50px;
-   display: block;
-   transition: 0.2s;
-}
 
-.button {
-    color: black;
+.resume {
+    border: 2px solid #AA00FF;
+    border-radius: 5px;
+    background-color: rgb(27, 26, 26);
+    padding: 14px 14px;
+    font-size: 16px;
     text-decoration: none;
+    color: #AA00FF;
+    cursor: pointer;
+    vertical-align: middle;
 }
 
-
-.button:hover {
-    text-decoration: none;
+.resume:hover {
+    background-color: #AA00FF;
     color: white;
+    text-decoration: none;
+  }
+
+.aboutBtn, .educationBtn, .experienceBtn,
+.projectsBtn, .contactBtn {
+    color: white;
+    text-decoration: none;
+    padding-right: 50px;
+    vertical-align: middle;
 }
 
-input[type="button"]
-{
-    border: none;
-    outline: none;padding: none;
-   background: none;
-   color: #fff;
-   font-size: 30px;
-   border: none;
-   border-radius: 2%;
-   float: left;
-   margin-top: -50px;
-   margin-left: 50px;
+.aboutBtn.cta, .educationBtn.cta,
+.experienceBtn.cta, .projectsBtn.cta,
+.contactBtn.cta {
+  color: #AA00FF;
 }
+
+
+.aboutBtn:hover, .educationBtn:hover, .experienceBtn:hover,
+.projectsBtn:hover, .contactBtn:hover {
+    text-decoration: none;
+    color: #AA00FF;
+}
+
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
@@ -84,18 +74,71 @@ input[type="button"]
   .sideNav a {font-size: 18px;}
 }
 
-.about, .education, .experience, .projects {
-    padding: 9rem 2rem 4rem 2rem;
+.logo {
+    height: 35px;
+    width: 35px;
+    float: left;
 }
 
-.profile {
-    float: right;
-    margin-top: -50px;
-    margin-left: -50px;
-    border-radius: 15px;
-    width: 160px;
-    height: 200px;
+
+
+#particles-js {
+    height: 100%;
+    background: rgb(27, 26, 26);
+    z-index: -10;
 }
+
+.start {
+    padding:  9rem 2rem 4rem 2rem;
+    margin-left: 150px;
+    position: absolute;
+}
+
+.about, .experience, .contact{
+    padding: 9rem 2rem 6rem 2rem;
+    margin-left: 150px;
+    margin-right: 100px;
+    background-color: #383838;
+}
+
+.education, .projects {
+    padding: 9rem 2rem 4rem 2rem;
+    background-color: rgb(73, 72, 73);
+   
+}
+
+.shift {
+    margin-left: 150px;
+    margin-right: 100px;
+}
+
+
+
+.profile {
+    margin-right:100px;
+    border-radius: 5px;
+    width: 240px;
+    height: 300px;
+    
+}
+
+.pfp {
+    position: relative;
+    margin: 0px 50px 50px 0px;
+    float: right;
+  }
+ 
+ .pfp::after {
+    content: '';
+    position: absolute;
+    width: 240px;
+    height: 300px;
+    border: 2px solid #AA00FF;
+    border-radius: 5px;
+    left: 30px;
+    top: 30px;
+    z-index: -1;
+  }
 
 .seal {
     float: left;
@@ -105,38 +148,283 @@ input[type="button"]
 }
 
 h1 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Coda', cursive;
+    font-size: 64px;
+}
+
+hr {
+    border-top: 0.5px solid #bbb;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+hr.short {
+    border-top: 2px solid #bbb;
+    width: 50%;
+    margin: auto;
+}
+
+h3 {
+    padding-bottom: 50px;
     font-size: 48px;
+
+}
+
+p {
+    font-size: 18px;
+    
 }
 
 .bio {
-    width: 65%;
+    width: 50%;
 }
 
 .time, .location {
     float: right;
 }
 
+.container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.card {
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-image: url("app.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+
+  transform: scale(1.05);
+  margin: 2rem;
+}
+
+.nezuko {
+  background-image: url("website.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h4 {
+  font-size: 36px;
+}
+
+.desc {
+  font-size: 16px;
+  text-align: left;
+  padding: 20px 10px 50px 10px;
+}
+
+.card-text {
+  opacity: 0;
+  position: relative;
+  top: 40px;
+  color: white;
+}
+
+.code {
+  margin-right: 20px;
+  float: right;
+}
+
+.card:hover{
+background: linear-gradient(145deg, #2b2929, #635c5c);
+box-shadow:  30px 30px 40px #141313, 
+              -30px -30px 40px #1c1919;
+  animation: large .7s ease-in-out forwards;
+}
+
+@keyframes large {
+  100% {
+      transform: scale(1.15);
+  }
+}
+.card:hover .card-text{
+  opacity: 1;
+}
+
+
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  right: 110%;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+ 
+a {
+    color: white;
+    
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.bounce {
+    position:fixed;
+    right: 1%;
+    bottom:0;
+    margin-top:-25px;
+    margin-left:-25px;
+    height:50px;
+    width:80px;
+    opacity:0 !important;
+    animation:bounce 1s infinite;
+  }
+  
+  @keyframes bounce {
+    0%       { bottom:5px; }
+    25%, 75% { bottom:15px; }
+    50%      { bottom:20px; }
+    100%     {bottom:0;}
+  }
+
+  .bounce.cta {
+    opacity:1 !important;
+    -webkit-transition: all ease-in-out .5s;
+    transition: all ease-in-out .5s;
+    -webkit-transition: all ease-in-out .5s;
+    }
+
 footer {
-    background-color: #A9CCE3;
+    background-color: rgb(27, 26, 26);
     height: 120px;
     bottom: 0;
     width: 100%;  
+   
+    
 }
 
-.contact {
-    float: left;
-    line-height: 6px;
-    width: 70%;
-    margin: 25px;
-    font-size: 16px;
+.copyright {
+    font-size: 14px;
+    text-align: center;
+    padding-top: 60px;
 }
 
-.links {
-    float: right;
-    margin: 25px;
-    font-size: 16px;
-    padding: 0px 10px;
-    word-wrap: normal;
+
+
+
+
+
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: rgb(184, 184, 184);        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(128, 126, 126);    /* color of the scroll thumb */
+    border-radius: 20px; 
+    border: 3px solid rgb(184, 184, 184);      /* roundness of the scroll thumb */
+  /* creates padding around scroll thumb */
+  }
+
+
+
+/* Style inputs */
+.contact-form {
+    width: 60%;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 16px;
     display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    width: 100%;
+    height: 200px;
+    padding: 12px 20px;
+    margin-bottom: 16px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Style the submit button */
+  input[type=submit] {
+    width: 100%;
+    background-color: #AA00FF;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Add a background color to the submit button on mouse-over */
+  input[type=submit]:hover {
+    background-color: #8500c7;
+  }
+
+  .links {
+        float: right;
+        
+  }
+
+
+  .social {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 75px;
+    margin-left: -100px;
+    
+  }
+
+  .social:hover {
+    animation: big 0.7s ease forwards;
+  }
+
+  @keyframes big {
+    100% {
+        transform: scale(1.5);
+    
+  
+
+    }
 }
